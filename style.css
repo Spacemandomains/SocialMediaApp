@@ -36,7 +36,6 @@ button[data-brand="tiktok"] {
 
   .button[data-brand="pinterest"] {
    background-color: #BD081C; /* Pinterest red */
-   color: #fff; /* Text color: white */
   }
 
   .button[data-brand="Blogger"] {
