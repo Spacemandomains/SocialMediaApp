@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Social Media Console</title>
+    <title>Main Dashboard</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -43,76 +43,57 @@
         .button:hover {
             background-color: #0056b3;
         }
+        table {
+            margin: 0 auto;
+        }
+        th, td {
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to the Main Dashboard</h1>
         
-        <div class="input-group">
-            <label for="instagram">Instagram:</label>
-            <input type="text" id="instagram" name="instagram" placeholder="Enter Instagram URL">
-        </div>
-        
-        <div class="input-group">
-            <label for="youtube">Youtube:</label>
-            <input type="text" id="youtube" name="youtube" placeholder="Enter Youtube URL">
-        </div>
-        
-        <div class="input-group">
-            <label for="twitter">Twitter:</label>
-            <input type="text" id="twitter" name="twitter" placeholder="Enter Twitter URL">
-        </div>
-        
-        <div class="input-group">
-            <label for="facebook">Facebook:</label>
-            <input type="text" id="facebook" name="facebook" placeholder="Enter Facebook URL">
-        </div>
-        
-        <div class="input-group">
-            <label for="tiktok">TikTok:</label>
-            <input type="text" id="tiktok" name="tiktok" placeholder="Enter TikTok URL">
-        </div>
-        
-        <div class="input-group">
-            <label for="reddit">Reddit:</label>
-            <input type="text" id="reddit" name="reddit" placeholder="Enter Reddit URL">
-        </div>
-        
-        <div class="input-group">
-            <label for="vk">VK:</label>
-            <input type="text" id="vk" name="vk" placeholder="Enter VK URL">
-        </div>
-        
-        <div class="input-group">
-            <label for="pinterest">Pinterest:</label>
-            <input type="text" id="pinterest" name="pinterest" placeholder="Enter Pinterest URL">
-        </div>
-        
-        <div class="input-group">
-            <label for="blogger">Blogger:</label>
-            <input type="text" id="blogger" name="blogger" placeholder="Enter Blogger URL">
-        </div>
-        
-        <div class="input-group">
-            <label for="tumblr">Tumblr:</label>
-            <input type="text" id="tumblr" name="tumblr" placeholder="Enter Tumblr URL">
-        </div>
-        
-        <div class="input-group">
-            <label for="mix">Mix:</label>
-            <input type="text" id="mix" name="mix" placeholder="Enter Mix URL">
-        </div>
-        
-        <div class="input-group">
-            <label for="discord">Discord:</label>
-            <input type="text" id="discord" name="discord" placeholder="Enter Discord URL">
-        </div>
-        
-        <div class="input-group">
-            <label for="twitch">Twitch:</label>
-            <input type="text" id="twitch" name="twitch" placeholder="Enter Twitch URL">
-        </div>
+        <table>
+            <tr>
+                <td><label for="instagram">Instagram:</label></td>
+                <td><input type="text" id="instagram" name="instagram" placeholder="Enter Instagram URL"></td>
+                <td><label for="youtube">Youtube:</label></td>
+                <td><input type="text" id="youtube" name="youtube" placeholder="Enter Youtube URL"></td>
+                <td><label for="twitter">Twitter:</label></td>
+                <td><input type="text" id="twitter" name="twitter" placeholder="Enter Twitter URL"></td>
+            </tr>
+            <tr>
+                <td><label for="facebook">Facebook:</label></td>
+                <td><input type="text" id="facebook" name="facebook" placeholder="Enter Facebook URL"></td>
+                <td><label for="tiktok">TikTok:</label></td>
+                <td><input type="text" id="tiktok" name="tiktok" placeholder="Enter TikTok URL"></td>
+                <td><label for="reddit">Reddit:</label></td>
+                <td><input type="text" id="reddit" name="reddit" placeholder="Enter Reddit URL"></td>
+            </tr>
+            <tr>
+                <td><label for="vk">VK:</label></td>
+                <td><input type="text" id="vk" name="vk" placeholder="Enter VK URL"></td>
+                <td><label for="pinterest">Pinterest:</label></td>
+                <td><input type="text" id="pinterest" name="pinterest" placeholder="Enter Pinterest URL"></td>
+                <td><label for="blogger">Blogger:</label></td>
+                <td><input type="text" id="blogger" name="blogger" placeholder="Enter Blogger URL"></td>
+            </tr>
+            <tr>
+                <td><label for="tumblr">Tumblr:</label></td>
+                <td><input type="text" id="tumblr" name="tumblr" placeholder="Enter Tumblr URL"></td>
+                <td><label for="mix">Mix:</label></td>
+                <td><input type="text" id="mix" name="mix" placeholder="Enter Mix URL"></td>
+                <td><label for="discord">Discord:</label></td>
+                <td><input type="text" id="discord" name="discord" placeholder="Enter Discord URL"></td>
+            </tr>
+            <tr>
+                <td><label for="twitch">Twitch:</label></td>
+                <td><input type="text" id="twitch" name="twitch" placeholder="Enter Twitch URL"></td>
+                <td colspan="4"></td> <!-- Empty cell for alignment -->
+            </tr>
+        </table>
 
         <button class="button" onclick="createLinks()">Create</button>
     </div>
