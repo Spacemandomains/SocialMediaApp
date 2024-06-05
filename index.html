@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Social Media Console</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .input-group input {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Main Dashboard</h1>
+        
+        <div class="input-group">
+            <label for="instagram">Instagram:</label>
+            <input type="text" id="instagram" name="instagram" placeholder="Enter Instagram URL">
+        </div>
+        
+        <div class="input-group">
+            <label for="youtube">Youtube:</label>
+            <input type="text" id="youtube" name="youtube" placeholder="Enter Youtube URL">
+        </div>
+        
+        <div class="input-group">
+            <label for="twitter">Twitter:</label>
+            <input type="text" id="twitter" name="twitter" placeholder="Enter Twitter URL">
+        </div>
+        
+        <div class="input-group">
+            <label for="facebook">Facebook:</label>
+            <input type="text" id="facebook" name="facebook" placeholder="Enter Facebook URL">
+        </div>
+        
+        <div class="input-group">
+            <label for="tiktok">TikTok:</label>
+            <input type="text" id="tiktok" name="tiktok" placeholder="Enter TikTok URL">
+        </div>
+        
+        <div class="input-group">
+            <label for="reddit">Reddit:</label>
+            <input type="text" id="reddit" name="reddit" placeholder="Enter Reddit URL">
+        </div>
+        
+        <div class="input-group">
+            <label for="vk">VK:</label>
+            <input type="text" id="vk" name="vk" placeholder="Enter VK URL">
+        </div>
+        
+        <div class="input-group">
+            <label for="pinterest">Pinterest:</label>
+            <input type="text" id="pinterest" name="pinterest" placeholder="Enter Pinterest URL">
+        </div>
+        
+        <div class="input-group">
+            <label for="blogger">Blogger:</label>
+            <input type="text" id="blogger" name="blogger" placeholder="Enter Blogger URL">
+        </div>
+        
+        <div class="input-group">
+            <label for="tumblr">Tumblr:</label>
+            <input type="text" id="tumblr" name="tumblr" placeholder="Enter Tumblr URL">
+        </div>
+        
+        <div class="input-group">
+            <label for="mix">Mix:</label>
+            <input type="text" id="mix" name="mix" placeholder="Enter Mix URL">
+        </div>
+        
+        <div class="input-group">
+            <label for="discord">Discord:</label>
+            <input type="text" id="discord" name="discord" placeholder="Enter Discord URL">
+        </div>
+        
+        <div class="input-group">
+            <label for="twitch">Twitch:</label>
+            <input type="text" id="twitch" name="twitch" placeholder="Enter Twitch URL">
+        </div>
+
+        <button class="button" onclick="createLinks()">Create</button>
+    </div>
+
+    <script>
+        function createLinks() {
+            var instagramUrl = document.getElementById('instagram').value;
+            var youtubeUrl = document.getElementById('youtube').value;
+            var twitterUrl = document.getElementById('twitter').value;
+            var facebookUrl = document.getElementById('facebook').value;
+            var tiktokUrl = document.getElementById('tiktok').value;
+            var redditUrl = document.getElementById('reddit').value;
+            var vkUrl = document.getElementById('vk').value;
+            var pinterestUrl = document.getElementById('pinterest').value;
+            var bloggerUrl = document.getElementById('blogger').value;
+            var tumblrUrl = document.getElementById('tumblr').value;
+            var mixUrl = document.getElementById('mix').value;
+            var discordUrl = document.getElementById('discord').value;
+            var twitchUrl = document.getElementById('twitch').value;
+
+            // Redirect to buttons.html page with query parameters
+            var queryParams = '';
+            if (instagramUrl) queryParams += 'instagram=' + encodeURIComponent(instagramUrl) + '&';
+            if (youtubeUrl) queryParams += 'youtube=' + encodeURIComponent(youtubeUrl) + '&';
+            if (twitterUrl) queryParams += 'twitter=' + encodeURIComponent(twitterUrl) + '&';
+            if (facebookUrl) queryParams += 'facebook=' + encodeURIComponent(facebookUrl) + '&';
+            if (tiktokUrl) queryParams += 'tiktok=' + encodeURIComponent(tiktokUrl) + '&';
+            if (redditUrl) queryParams += 'reddit=' + encodeURIComponent(redditUrl) + '&';
+            if (vkUrl) queryParams += 'vk=' + encodeURIComponent(vkUrl) + '&';
+            if (pinterestUrl) queryParams += 'pinterest=' + encodeURIComponent(pinterestUrl) + '&';
+            if (bloggerUrl) queryParams += 'blogger=' + encodeURIComponent(bloggerUrl) + '&';
+            if (tumblrUrl) queryParams += 'tumblr=' + encodeURIComponent(tumblrUrl) + '&';
+            if (mixUrl) queryParams += 'mix=' + encodeURIComponent(mixUrl) + '&';
+            if (discordUrl) queryParams += 'discord=' + encodeURIComponent(discordUrl) + '&';
+            if (twitchUrl) queryParams += 'twitch=' + encodeURIComponent(twitchUrl);
+
+            window.location.href = 'buttons.html?' + queryParams;
+        }
+    </script>
+</body>
+</html>
