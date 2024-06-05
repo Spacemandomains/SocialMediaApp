@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+        }
+        .button {
+            width: 72px;
+            height: 72px;
+            border: 1px solid #ccc;
+            display: inline-block;
+            margin: 5px;
+            text-align: center;
+            line-height: 72px;
+            cursor: pointer;
+        }
+        .button[data-brand="twitter"] {
+            background-color: #1DA1F2;
+            color: #fff;
+        }
+        .button[data-brand="facebook"] {
+            background-color: #3B5998;
+            color: #fff;
+        }
+        .button[data-brand="tiktok"] {
+            background-color: #FF0000;
+            color: #fff;
+        }
+        .button[data-brand="reddit"] {
+            background-color: #FF4500;
+            color: #fff;
+        }
+        .button[data-brand="vk"] {
+            background-color: #4C75A3;
+            color: #fff;
+        }
+        .button[data-brand="pinterest"] {
+            background-color: #BD081C;
+            color: #fff;
+        }
+        .button[data-brand="Blogger"] {
+            background-color: #FF5722;
+            color: #fff;
+        }
+        .button[data-brand="Tumblr"] {
+            background-color: #35465C;
+            color: #fff;
+        }
+        .button[data-brand="Mix"] {
+            background-color: #FF4081;
+            color: #fff;
+        }
+        .button[data-brand="Discord"] {
+            background-color: #7289DA;
+            color: #fff;
+        }
+        .button[data-brand="Twitch"] {
+            background-color: #6441A5;
+            color: #fff;
+        }
+        .button[data-brand="instagram"] {
+            background-color: #E4405F;
+            color: #fff;
+        }
+        .button[data-brand="Youtube"] {
+            background-color: #c4302b;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button" data-brand="instagram" onclick="window.open('https://instagram.com','_blank')">Instagram</div>
+        <div class="button" data-brand="Youtube" onclick="window.open('https://youtube.com','_blank')">YouTube</div>
+        <div class="button" data-brand="twitter" onclick="window.open('https://twitter.com','_blank')">Twitter</div>
+        <div class="button" data-brand="facebook" onclick="window.open('https://facebook.com','_blank')">Facebook</div>
+        <div class="button" data-brand="tiktok" onclick="window.open('https://tiktok.com','_blank')">TikTok</div>
+        <div class="button" data-brand="reddit" onclick="window.open('https://reddit.com','_blank')">Reddit</div>
+        <div class="button" data-brand="vk" onclick="window.open('https://vk.com','_blank')">VK</div>
+        <div class="button" data-brand="pinterest" onclick="window.open('https://pinterest.com','_blank')">Pinterest</div>
+        <div class="button" data-brand="Blogger" onclick="window.open('https://blogger.com','_blank')">Blogger</div>
+        <div class="button" data-brand="Tumblr" onclick="window.open('https://tumblr.com','_blank')">Tumblr</div>
+        <div class="button" data-brand="Mix" onclick="window.open('https://mix.com','_blank')">Mix</div>
+        <div class="button" data-brand="Discord" onclick="window.open('https://discord.com','_blank')">Discord</div>
+        <div class="button" data-brand="Twitch" onclick="window.open('https://twitch.tv','_blank')">Twitch</div>
+    </div>
+</body>
+</html>
