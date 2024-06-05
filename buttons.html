@@ -5,20 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media Buttons</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            padding: 20px;
-            text-align: center;
-        }
         .button {
             width: 72px;
             height: 72px;
@@ -29,77 +15,107 @@
             line-height: 72px;
             cursor: pointer;
         }
+
         .button[data-brand="twitter"] {
             background-color: #1DA1F2;
             color: #fff;
         }
+
         .button[data-brand="facebook"] {
             background-color: #3B5998;
             color: #fff;
         }
+
         .button[data-brand="tiktok"] {
             background-color: #FF0000;
             color: #fff;
         }
+
         .button[data-brand="reddit"] {
             background-color: #FF4500;
             color: #fff;
         }
+
         .button[data-brand="vk"] {
             background-color: #4C75A3;
             color: #fff;
         }
+
         .button[data-brand="pinterest"] {
             background-color: #BD081C;
             color: #fff;
         }
+
         .button[data-brand="Blogger"] {
             background-color: #FF5722;
             color: #fff;
         }
+
         .button[data-brand="Tumblr"] {
             background-color: #35465C;
             color: #fff;
         }
+
         .button[data-brand="Mix"] {
             background-color: #FF4081;
             color: #fff;
         }
+
         .button[data-brand="Discord"] {
             background-color: #7289DA;
             color: #fff;
         }
+
         .button[data-brand="Twitch"] {
             background-color: #6441A5;
             color: #fff;
         }
+
         .button[data-brand="instagram"] {
             background-color: #E4405F;
             color: #fff;
         }
+
         .button[data-brand="Youtube"] {
             background-color: #c4302b;
             color: #fff;
         }
-        .new-links-button {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .new-links-button:hover {
-            background-color: #0056b3;
-        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Buttons are dynamically generated based on the provided social media links -->
+    <div>
+        <!-- New Links button linking back to index.html -->
+        <button onclick="window.location.href = 'index.html';">New Links</button>
     </div>
 
-    <button class="new-links-button" onclick="window.location.href = 'index.html';">New Links</button>
+    <div id="socialButtonsContainer"></div>
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return Object.fromEntries(urlParams.entries());
+        }
+
+        // Function to create social media buttons
+        function createButtons() {
+            const socialLinks = getUrlParams();
+            const socialButtonsContainer = document.getElementById('socialButtonsContainer');
+
+            for (const [brand, url] of Object.entries(socialLinks)) {
+                const button = document.createElement('div');
+                button.className = 'button';
+                button.dataset.brand = brand.toLowerCase();
+                button.textContent = brand;
+                button.onclick = function() {
+                    window.open(url, '_blank');
+                };
+                socialButtonsContainer.appendChild(button);
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = createButtons;
+    </script>
 </body>
 </html>
