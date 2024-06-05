@@ -45,9 +45,11 @@
         }
         table {
             margin: 0 auto;
+            border-collapse: collapse;
         }
         th, td {
             padding: 10px;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
@@ -64,6 +66,7 @@
                 <td><label for="twitter">Twitter:</label></td>
                 <td><input type="text" id="twitter" name="twitter" placeholder="Enter Twitter URL"></td>
             </tr>
+            <!-- Add other rows for social media inputs -->
             <tr>
                 <td><label for="facebook">Facebook:</label></td>
                 <td><input type="text" id="facebook" name="facebook" placeholder="Enter Facebook URL"></td>
@@ -72,6 +75,7 @@
                 <td><label for="reddit">Reddit:</label></td>
                 <td><input type="text" id="reddit" name="reddit" placeholder="Enter Reddit URL"></td>
             </tr>
+            <!-- Add more rows for additional social media inputs -->
             <tr>
                 <td><label for="vk">VK:</label></td>
                 <td><input type="text" id="vk" name="vk" placeholder="Enter VK URL"></td>
@@ -95,24 +99,18 @@
             </tr>
         </table>
 
-        <button class="button" onclick="createLinks()">Create</button>
+        <button class="button" onclick="openButtonsPage()">Create</button>
     </div>
 
     <script>
-        function createLinks() {
+        function openButtonsPage() {
             var instagramUrl = document.getElementById('instagram').value;
             var youtubeUrl = document.getElementById('youtube').value;
             var twitterUrl = document.getElementById('twitter').value;
             var facebookUrl = document.getElementById('facebook').value;
             var tiktokUrl = document.getElementById('tiktok').value;
             var redditUrl = document.getElementById('reddit').value;
-            var vkUrl = document.getElementById('vk').value;
-            var pinterestUrl = document.getElementById('pinterest').value;
-            var bloggerUrl = document.getElementById('blogger').value;
-            var tumblrUrl = document.getElementById('tumblr').value;
-            var mixUrl = document.getElementById('mix').value;
-            var discordUrl = document.getElementById('discord').value;
-            var twitchUrl = document.getElementById('twitch').value;
+            // Retrieve other social media URLs
 
             // Redirect to buttons.html page with query parameters
             var queryParams = '';
@@ -122,15 +120,10 @@
             if (facebookUrl) queryParams += 'facebook=' + encodeURIComponent(facebookUrl) + '&';
             if (tiktokUrl) queryParams += 'tiktok=' + encodeURIComponent(tiktokUrl) + '&';
             if (redditUrl) queryParams += 'reddit=' + encodeURIComponent(redditUrl) + '&';
-            if (vkUrl) queryParams += 'vk=' + encodeURIComponent(vkUrl) + '&';
-            if (pinterestUrl) queryParams += 'pinterest=' + encodeURIComponent(pinterestUrl) + '&';
-            if (bloggerUrl) queryParams += 'blogger=' + encodeURIComponent(bloggerUrl) + '&';
-            if (tumblrUrl) queryParams += 'tumblr=' + encodeURIComponent(tumblrUrl) + '&';
-            if (mixUrl) queryParams += 'mix=' + encodeURIComponent(mixUrl) + '&';
-            if (discordUrl) queryParams += 'discord=' + encodeURIComponent(discordUrl) + '&';
-            if (twitchUrl) queryParams += 'twitch=' + encodeURIComponent(twitchUrl);
+            // Add other social media URLs to queryParams
 
-            window.location.href = 'buttons.html?' + queryParams;
+            // Open buttons.html in a new browser window
+            window.open('buttons.html?' + queryParams, '_blank');
         }
     </script>
 </body>
