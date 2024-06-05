@@ -101,6 +101,7 @@
         function createButtons() {
             const socialLinks = getUrlParams();
             const socialButtonsContainer = document.getElementById('socialButtonsContainer');
+            socialButtonsContainer.innerHTML = ''; // Clear previous buttons
 
             for (const [brand, url] of Object.entries(socialLinks)) {
                 const button = document.createElement('div');
@@ -116,6 +117,9 @@
 
         // Call the function when the page loads
         window.onload = createButtons;
+
+        // Call the function when the page receives focus
+        window.onfocus = createButtons;
     </script>
 </body>
 </html>
