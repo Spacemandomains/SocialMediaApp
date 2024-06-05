@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buttons</title>
+    <title>Social Media Buttons</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
             padding: 20px;
@@ -78,9 +82,6 @@
             color: #fff;
         }
         .new-links-button {
-            position: fixed;
-            top: 20px;
-            right: 20px;
             padding: 10px 20px;
             background-color: #007BFF;
             color: white;
@@ -96,19 +97,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="button" data-brand="instagram">Instagram</div>
-        <div class="button" data-brand="Youtube">YouTube</div>
-        <div class="button" data-brand="twitter">Twitter</div>
-        <div class="button" data-brand="facebook">Facebook</div>
-        <div class="button" data-brand="tiktok">TikTok</div>
-        <div class="button" data-brand="reddit">Reddit</div>
-        <div class="button" data-brand="vk">VK</div>
-        <div class="button" data-brand="pinterest">Pinterest</div>
-        <div class="button" data-brand="Blogger">Blogger</div>
-        <div class="button" data-brand="Tumblr">Tumblr</div>
-        <div class="button" data-brand="Mix">Mix</div>
-        <div class="button" data-brand="Discord">Discord</div>
-        <div class="button" data-brand="Twitch">Twitch</div>
+        <!-- Buttons are dynamically generated based on the provided social media links -->
     </div>
 
     <button class="new-links-button" onclick="window.location.href = 'index.html';">New Links</button>
